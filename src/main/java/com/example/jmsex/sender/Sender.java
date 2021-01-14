@@ -23,9 +23,12 @@ public class Sender {
         System.out.println("sending message - " + counter);
         HelloMessage helloMessage=new HelloMessage("hello");
 
-        jmsTemplate.convertAndSend("our-queue", helloMessage );
+        jmsTemplate.convertAndSend("our-queue", helloMessage);
 
         System.out.println("message - " + counter+ " sent");
+        System.out.println(helloMessage);
+
+        counter++;
 
 
 
